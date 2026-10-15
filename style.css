@@ -35,7 +35,7 @@ img {
     height: auto;
 }
 
-/* NAVBAR DESKTOP (Sama Persis Desain Awal) */
+/* NAVBAR DESKTOP */
 .navbar {
     background-color: #A96E50;
     position: sticky;
@@ -60,6 +60,13 @@ img {
     display: flex;
     align-items: center;
     gap: 12px;
+    white-space: nowrap;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
 }
 
 .nav-toggle {
@@ -90,13 +97,14 @@ img {
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
+    white-space: nowrap;
 }
 
 section, footer {
     scroll-margin-top: 80px;
 }
 
-/* SECTION DESKTOP (Sama Persis Desain Awal) */
+/* SECTION DESKTOP */
 section {
     padding: 80px 80px;
     max-width: 1440px;
@@ -221,6 +229,11 @@ h2 {
 
 .card .icon {
     margin-bottom: 16px;
+}
+
+.card .icon img {
+    height: 50px;
+    width: auto;
 }
 
 .card h3 {
@@ -353,6 +366,11 @@ h2 {
     margin-bottom: 16px;
 }
 
+.footer-logo img {
+    height: 50px;
+    width: auto;
+}
+
 .footer-left p {
     font-size: 12px;
     color: #CCC;
@@ -361,8 +379,14 @@ h2 {
 
 .address {
     display: flex;
+    align-items: center;
     gap: 10px;
     font-size: 12px;
+}
+
+.address img {
+    height: 24px;
+    width: auto;
 }
 
 .footer-middle {
@@ -406,17 +430,46 @@ h2 {
     gap: 10px;
 }
 
+.btn-wa-large img {
+    height: 32px;
+    width: auto;
+}
+
 /* ==========================================
    KHUSUS TAMPILAN HP (MOBILE ONLY <= 768px)
    ========================================== */
 @media (max-width: 768px) {
     .navbar {
-        padding: 12px 20px;
+        padding: 12px 16px;
+    }
+
+    .nav-container {
+        gap: 8px;
+    }
+
+    .logo {
+        order: 1;
+        font-size: 16px;
+        gap: 6px;
+    }
+
+    .logo img {
+        height: 32px;
+    }
+
+    .btn-wa {
+        order: 2;
+        font-size: 12px;
+        padding: 8px 12px;
+        border-radius: 6px;
     }
 
     .nav-toggle {
         display: block;
-        order: 3; /* Ikon Hamburger pindah ke paling kanan */
+        order: 3;
+        font-size: 24px;
+        padding: 0;
+        margin-left: 4px;
     }
 
     .nav-links {
@@ -428,7 +481,7 @@ h2 {
         background-color: #A96E50;
         flex-direction: column;
         box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-        text-align: left; /* Ganti dari center ke left */
+        text-align: left;
         padding: 16px 24px;
     }
 
@@ -499,51 +552,4 @@ h2 {
         justify-content: center;
         font-size: 16px;
     }
-    .logo {
-        order: 1; /* Logo di paling kiri */
-    }
-
-    .btn-wa {
-        order: 2; /* Tombol WA di tengah/sebelum hamburger */
-    }
-
-    /* Mengubah arah teks menu dropdown menjadi rata kiri */
-    
-}
-
-/* BATAS UKURAN LOGO NAVBAR & FOOTER */
-.logo img {
-    height: 40px;
-    width: auto;
-    object-fit: contain;
-}
-
-.footer-logo img {
-    height: 50px;
-    width: auto;
-    object-fit: contain;
-}/* UKURAN PRESISI LOGO & IKON */
-.logo img {
-    height: 40px;
-    width: auto;
-}
-
-.footer-logo img {
-    height: 50px;
-    width: auto;
-}
-
-.card .icon img {
-    height: 50px;
-    width: auto;
-}
-
-.address img {
-    height: 30px;
-    width: auto;
-}
-
-.btn-wa-large img {
-    height: 50px;
-    width: auto;
 }
