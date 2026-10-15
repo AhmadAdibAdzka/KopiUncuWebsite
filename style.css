@@ -26,11 +26,18 @@ body {
     background-color: var(--bg-light);
     color: var(--dark);
     line-height: 1.6;
+    overflow-x: hidden;
+    width: 100%;
 }
 
-/* NAVBAR (STICKY) */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* NAVBAR DESKTOP (Sama Persis Desain Awal) */
 .navbar {
-    background-color: #A96E50; /* Warna cokelat navbar */
+    background-color: #A96E50;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -45,11 +52,23 @@ body {
     align-items: center;
 }
 
-.logo, .footer-logo {
+.logo {
     font-family: var(--font-heading);
     font-size: 24px;
     font-weight: 700;
     color: var(--dark);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 28px;
+    cursor: pointer;
 }
 
 .nav-links a {
@@ -77,7 +96,7 @@ section, footer {
     scroll-margin-top: 80px;
 }
 
-/* UMUM SECTION */
+/* SECTION DESKTOP (Sama Persis Desain Awal) */
 section {
     padding: 80px 80px;
     max-width: 1440px;
@@ -91,7 +110,7 @@ h2 {
     margin-bottom: 40px;
 }
 
-/* HERO SECTION */
+/* HERO SECTION DESKTOP */
 .hero {
     display: flex;
     align-items: center;
@@ -180,9 +199,11 @@ h2 {
     font-weight: bold;
     box-shadow: 0 20px 30px rgba(0,0,0,0.15);
     z-index: 2;
+    text-align: center;
+    padding: 20px;
 }
 
-/* PROFIL SECTION */
+/* PROFIL SECTION DESKTOP */
 .card-container {
     display: flex;
     gap: 32px;
@@ -199,7 +220,6 @@ h2 {
 }
 
 .card .icon {
-    font-size: 40px;
     margin-bottom: 16px;
 }
 
@@ -213,7 +233,7 @@ h2 {
     color: #666;
 }
 
-/* PRODUCT SECTION */
+/* PRODUCT SECTION DESKTOP */
 .product .subtitle {
     text-align: center;
     margin-top: -30px;
@@ -257,6 +277,7 @@ h2 {
     border-radius: 20px;
     display: inline-block;
     margin-bottom: 16px;
+    align-self: center;
 }
 
 .product-card h3 {
@@ -289,7 +310,7 @@ h2 {
     display: block;
 }
 
-/* FAQ SECTION */
+/* FAQ SECTION DESKTOP */
 .faq-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -301,14 +322,14 @@ h2 {
 .faq-box {
     background: var(--white);
     padding: 20px 30px;
-    border-radius: 50px; /* Bentuk kapsul sesuai desain */
+    border-radius: 50px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     text-align: center;
     font-size: 14px;
     font-weight: 500;
 }
 
-/* FOOTER SECTION */
+/* FOOTER SECTION DESKTOP */
 .footer {
     background-color: var(--dark);
     color: var(--white);
@@ -386,118 +407,46 @@ h2 {
 }
 
 /* ==========================================
-   RESPONSIVE DESIGN (MEDIA QUERIES)
+   KHUSUS TAMPILAN HP (MOBILE ONLY <= 768px)
    ========================================== */
-
-/* Tombol Hamburger Default Hidden di Desktop */
-.nav-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: var(--white);
-    font-size: 28px;
-    cursor: pointer;
-}
-
-/* 1. TABLET & LAPTOP KECIL (Max-width: 1024px) */
-@media (max-width: 1024px) {
-    .navbar {
-        padding: 16px 40px;
-    }
-
-    section {
-        padding: 60px 40px;
-    }
-
-    .hero {
-        gap: 30px;
-    }
-
-    .hero h1 {
-        font-size: 38px;
-    }
-
-    .placeholder-img {
-        width: 100%;
-        max-width: 420px;
-        height: 350px;
-    }
-
-    .circle-gold {
-        width: 320px;
-        height: 320px;
-    }
-
-    .product-grid {
-        flex-wrap: wrap;
-    }
-
-    .product-card {
-        flex: 1 1 calc(50% - 24px); /* 2 Kolom di Tablet */
-        min-width: 240px;
-    }
-
-    .footer {
-        padding: 60px 40px;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        gap: 32px;
-    }
-
-    .footer-middle nav {
-        justify-content: flex-start;
-    }
-}
-
-/* 2. HANDPHONE / MOBILE (Max-width: 768px) */
 @media (max-width: 768px) {
     .navbar {
         padding: 12px 20px;
     }
 
-    /* Pengaturan Menu Mobile (Hamburger) */
     .nav-toggle {
         display: block;
     }
 
     .nav-links {
-        display: none; /* Sembunyi secara default */
+        display: none;
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
         background-color: #A96E50;
         flex-direction: column;
-        padding: 20px 0;
+        padding: 16px 0;
         text-align: center;
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
     }
 
     .nav-links.active {
-        display: flex; /* Muncul saat tombol ditap */
+        display: flex;
     }
 
     .nav-links a {
-        margin: 12px 0;
-        font-size: 16px;
-    }
-
-    .btn-wa {
-        padding: 8px 14px;
-        font-size: 13px;
+        margin: 10px 0;
     }
 
     section {
-        padding: 50px 20px;
+        padding: 40px 20px;
     }
 
-    /* Hero Section Mobile */
     .hero {
-        flex-direction: column-reverse; /* Foto di atas, teks di bawah */
+        flex-direction: column-reverse;
         text-align: center;
-        gap: 30px;
+        gap: 24px;
     }
 
     .hero h1 {
@@ -509,67 +458,81 @@ h2 {
     }
 
     .hero-buttons {
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .btn-primary, .btn-secondary {
-        width: 100%;
-        text-align: center;
+        justify-content: center;
     }
 
     .placeholder-img {
         width: 100%;
         max-width: 320px;
-        height: 280px;
-        font-size: 13px;
+        height: 320px;
     }
 
     .circle-gold {
-        width: 250px;
-        height: 250px;
+        width: 280px;
+        height: 280px;
     }
 
-    /* Card Profil & Produk Mobile */
-    .card-container {
+    .card-container, 
+    .product-grid, 
+    .footer-container {
         flex-direction: column;
         gap: 20px;
     }
 
-    .product-grid {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .product-card {
-        flex: 1 1 100%; /* 1 Kolom Penuh di HP */
-    }
-
-    /* FAQ Mobile */
     .faq-grid {
-        grid-template-columns: 1fr; /* 1 Kolom di HP */
-        gap: 16px;
+        grid-template-columns: 1fr;
+        gap: 12px;
     }
 
-    .faq-box {
-        padding: 16px 20px;
-        border-radius: 20px;
-        font-size: 13px;
-    }
-
-    /* Footer Mobile */
     .footer {
         padding: 40px 20px;
     }
 
-    .footer-left p, .address p {
-        font-size: 13px;
+    .footer-middle nav {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px 20px;
     }
 
     .btn-wa-large {
         width: 100%;
         justify-content: center;
         font-size: 16px;
-        padding: 14px 20px;
     }
+}
+
+/* BATAS UKURAN LOGO NAVBAR & FOOTER */
+.logo img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.footer-logo img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}/* UKURAN PRESISI LOGO & IKON */
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.footer-logo img {
+    height: 50px;
+    width: auto;
+}
+
+.card .icon img {
+    height: 50px;
+    width: auto;
+}
+
+.address img {
+    height: 30px;
+    width: auto;
+}
+
+.btn-wa-large img {
+    height: 50px;
+    width: auto;
 }
