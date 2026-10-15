@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kopi Uncu - Landing Page</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="img/logo_kopi.png" />
     <!-- Mengambil Font dari Google Fonts sesuai desain -->
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
@@ -13,25 +14,27 @@
   </head>
   <body>
     <!-- NAVBAR HEADER -->
-    <header class="navbar">
-      <div class="nav-container">
-        <!-- Ganti src dengan nama file logo header kamu -->
-        <div class="logo">
-          <img src="img/logo_kopi.png" alt="KOPI UNCU" height="40" />
-          <span>KOPI UNCU</span>
-        </div>
-        <nav class="nav-links">
-          <a href="#home">Home</a>
-          <a href="#profil">Profile</a>
-          <a href="#product">Product</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contact">Contact</a>
-        </nav>
-        <a href="https://wa.me/6281270957157" class="btn-wa" target="_blank"
-          >Pesan WhatsApp</a
-        >
-      </div>
-    </header>
+    <!-- NAVBAR HEADER -->
+<header class="navbar">
+  <div class="nav-container">
+    <div class="logo">
+      <img src="img/logo_kopi.png" alt="KOPI UNCU" height="40" />
+      <span>KOPI UNCU</span>
+    </div>
+    <!-- Tombol Hamburger untuk Tampilan HP -->
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      ☰
+    </button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#profil">Profile</a>
+      <a href="#product">Product</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="https://wa.me/6281270957157" class="btn-wa" target="_blank">Pesan WhatsApp</a>
+  </div>
+</header>
 
     <!-- HERO SECTION -->
     <section id="home" class="hero">
